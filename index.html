@@ -1,0 +1,686 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>HotelRunner Apps API Reference</title>
+
+    <link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="javascripts/all.js" type="text/javascript"></script>
+
+      <script>
+        $(function() {
+          setupLanguages(["curl"]);
+        });
+      </script>
+  </head>
+
+  <body class="index">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+      <div class="logo-wrapper">
+        <img style="margin-left" src="http://hotelrunner.com/wp-content/uploads/2014/11/xr_s_logo.png.pagespeed.ic.ewlub2wLst.png" />
+      </div>
+        <div class="lang-selector">
+              <a href="#" data-language-name="curl">curl</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc">
+      </div>
+        <ul class="toc-footer">
+            <li><a href='http://support.hotelrunner.com?ref=api_docs'>Support</a></li>
+            <li><a class='sign_up_links' href='https://app.hotelrunner.com/signup?pk_campaign=api_docs'><span>SIGN UP FREE</span></a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        
+          <h1 id="introduction">Introduction</h1>
+
+<p>Welcome to the HotelRunner Apps ApI! You can use our Apps Api to access HotelRunner&rsquo;s api endpoints,
+which can get information on rooms, reservations, make price &amp; availability updates and even receive real-time reservation updates.</p>
+
+<p>You can view code examples in the dark area to the right.</p>
+
+<h1 id="authentication">Authentication</h1>
+
+<p>HotelRunner uses TOKEN and HR_ID keys to allow access to the API. You can register a new HotelRunner Apps API key at your property panel under My Property section.</p>
+
+<aside class="notice">
+<b><code>token</code></b> and <b><code>hr_id</code></b> parameters must be sent for authentication.
+</aside>
+
+          <h1 id="rooms">Rooms</h1>
+
+<h2 id="get-room-list">Get Room List</h2>
+<pre class="highlight shell"><code>curl <span class="s2">"https://app.hotelrunner.com/api/v1/apps/rooms?token={TOKEN}&amp;hr_id={HR_ID}"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">[</span><span class="w">
+
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HR_1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Standard Room"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Standard Room Description"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"policy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Standard Room Policy"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"room_capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"adult_capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HR_2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Double Room"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Double Room Description"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"policy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Double Room Policy"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"room_capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"adult_capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves all rooms of property.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://app.hotelrunner.com/api/v1/apps/rooms</code></p>
+
+<h3 id="room-object">Room Object</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>code</strong></td>
+<td>Room code on HotelRunner</td>
+</tr>
+<tr>
+<td><strong>name</strong></td>
+<td>Name of room</td>
+</tr>
+<tr>
+<td><strong>description</strong></td>
+<td>Description of room</td>
+</tr>
+<tr>
+<td><strong>policy</strong></td>
+<td>Free text policy for room</td>
+</tr>
+<tr>
+<td><strong>room_capacity</strong></td>
+<td>Maximum room capacity including children</td>
+</tr>
+<tr>
+<td><strong>adult_capacity</strong></td>
+<td>Maximum adult count that can stay in room</td>
+</tr>
+</tbody></table>
+
+<h2 id="update-room">Update Room</h2>
+<pre class="highlight shell"><code>curl -X PUT --data <span class="s2">"hr_id={HR_ID}&amp;token={TOKEN}&amp;vid={ROOM_CODE}&amp;start_date={START_DATE}&amp;end_date={END_DATE}&amp;availability={AVAILABILITY}&amp;price={PRICE}&amp;min_stay={MIN_STAY}&amp;stop_sale={STOP_SALE}"</span> https://app.hotelrunner.com/api/v1/apps/rooms/~
+</code></pre>
+
+<blockquote>
+<p>The above command returns text structured like this:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>'ok' for success, 'try_again' for fail.
+</code></pre>
+
+<p>This endpoint retrieves all rooms of property.</p>
+
+<p><code class="prettyprint">PUT https://app.hotelrunner.com/api/v1/apps/rooms/~</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>vid</strong></td>
+<td>-</td>
+<td>Yes</td>
+<td>Room code that will be updated.</td>
+</tr>
+<tr>
+<td><strong>availability</strong></td>
+<td>-</td>
+<td>No</td>
+<td>Don&rsquo;t send this parameter if you don&rsquo;t want to update availability.</td>
+</tr>
+<tr>
+<td><strong>price</strong></td>
+<td>-</td>
+<td>No</td>
+<td>Don&rsquo;t send this parameter if you don&rsquo;t want to update price.</td>
+</tr>
+<tr>
+<td><strong>stop_sale</strong></td>
+<td>-</td>
+<td>No</td>
+<td>Don&rsquo;t send this parameter if you don&rsquo;t want to update stop sale. Accepted values: <code class="prettyprint">1</code> or <code class="prettyprint">0</code></td>
+</tr>
+<tr>
+<td><strong>min_stay</strong></td>
+<td>-</td>
+<td>No</td>
+<td>Don&rsquo;t send this parameter if you don&rsquo;t want to update min_stay.</td>
+</tr>
+<tr>
+<td><strong>start_date</strong></td>
+<td>-</td>
+<td>Yes</td>
+<td>Format: <code class="prettyprint">YYYY-MM-DD</code> Start date</td>
+</tr>
+<tr>
+<td><strong>end_date</strong></td>
+<td>-</td>
+<td>Yes</td>
+<td>Format: <code class="prettyprint">YYYY-MM-DD</code> End date</td>
+</tr>
+<tr>
+<td><strong>days</strong></td>
+<td>[0,1,2,3,4,5,6]</td>
+<td>No</td>
+<td>Used to update specific week days within given date range. (Sunday: 0)</td>
+</tr>
+</tbody></table>
+
+          <h1 id="reservations">Reservations</h1>
+
+<h2 id="get-all-reservations">Get All Reservations</h2>
+<pre class="highlight shell"><code>curl <span class="s2">"https://app.hotelrunner.com/api/v1/apps/reservations?token={TOKEN}&amp;hr_id={HR_ID}"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"reservations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"hr_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R754208185"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"provider_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"channel"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"confirmed"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"guest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"cancel_reason"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-21T10:01:25Z"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-21T09:02:51Z"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"sub_total"</span><span class="p">:</span><span class="w"> </span><span class="mf">185.0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"extras_total"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"adjustments_total"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"tax_total"</span><span class="p">:</span><span class="w"> </span><span class="mf">15.0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mf">200.0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EUR"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"checkin_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-11"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"checkout_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-12"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"payment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"credit_card"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"istanbul"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Turkey"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90955223454"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"guest@example.net"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bagdat Cad. Istanbul"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"street_2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"rooms"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"15571"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reserved"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HR:10105"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">200.0</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"nights"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"total_guest"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"total_adult"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"child_ages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+              </span><span class="p">],</span><span class="w">
+              </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Queen Room - Disability Access - Deluxe Rate"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"checkin_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-11"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"checkout_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-12"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"extra_info"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Room Extra Info:Modern bir şekilde dekore edilmiş bu stüdyoda çalışma masası ve özel banyo bulunmaktadır.\nMeal Plan:Kahvaltı oda fiyatına dahildir.\nNon-Smoking Room"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"daily_prices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+              </span><span class="p">],</span><span class="w">
+              </span><span class="s2">"extras"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+              </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves all reservations with pagination.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://app.hotelrunner.com/api/v1/apps/reservations</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>from_date</strong></td>
+<td>10 days before</td>
+<td>No</td>
+<td>Format: <code class="prettyprint">YYYY-MM-DD</code>. If provided, reservations after this date will be retrieved.</td>
+</tr>
+<tr>
+<td><strong>per_page</strong></td>
+<td>10</td>
+<td>No</td>
+<td>Number of reservations per page.</td>
+</tr>
+<tr>
+<td><strong>page</strong></td>
+<td>1</td>
+<td>No</td>
+<td>Number of current page.</td>
+</tr>
+<tr>
+<td><strong>reservation_number</strong></td>
+<td>-</td>
+<td>No</td>
+<td>Used to get a specific reservation. It can be either HotelRunner or Channel reservation code.</td>
+</tr>
+</tbody></table>
+
+<h3 id="reservation-object">Reservation Object</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>hr_number</strong></td>
+<td>Reservation code on HotelRunner</td>
+</tr>
+<tr>
+<td><strong>provider_number</strong></td>
+<td>Reservation code on Sales Channel (can be blank*)</td>
+</tr>
+<tr>
+<td><strong>channel</strong></td>
+<td>Sales channel name (can be blank*)</td>
+</tr>
+<tr>
+<td><strong>state</strong></td>
+<td>Reservation status on HotelRunner (<code class="prettyprint">confirmed</code>, <code class="prettyprint">canceled</code>, <code class="prettyprint">complete</code>)</td>
+</tr>
+<tr>
+<td><strong>guest</strong></td>
+<td>Guest name, who made the reservation</td>
+</tr>
+<tr>
+<td><strong>cancel_reason</strong></td>
+<td>Cancel reason (can be blank*)</td>
+</tr>
+<tr>
+<td><strong>completed_at</strong></td>
+<td>The time that shows when HotelRunner received the reservation (UTC)</td>
+</tr>
+<tr>
+<td><strong>updated_at</strong></td>
+<td>The time that shows when HotelRunner received the latest update (UTC)</td>
+</tr>
+<tr>
+<td><strong>sub_total</strong></td>
+<td>Sub total (tax not included)</td>
+</tr>
+<tr>
+<td><strong>extras_total</strong></td>
+<td>Extras total (tax not included)</td>
+</tr>
+<tr>
+<td><strong>adjustments_total</strong></td>
+<td>Adjustments total (Price adjustments total that made by Property Admin)</td>
+</tr>
+<tr>
+<td><strong>tax_total</strong></td>
+<td>Tax total</td>
+</tr>
+<tr>
+<td><strong>total</strong></td>
+<td>Grand total</td>
+</tr>
+<tr>
+<td><strong>currency</strong></td>
+<td>Currency (ISO-4217)</td>
+</tr>
+<tr>
+<td><strong>checkin_date</strong></td>
+<td>Check-in Date</td>
+</tr>
+<tr>
+<td><strong>checkout_date</strong></td>
+<td>Check-out Date</td>
+</tr>
+<tr>
+<td><strong>note</strong></td>
+<td>Guest note (can be blank*)</td>
+</tr>
+<tr>
+<td><strong>payment</strong></td>
+<td>Payment method information (<code class="prettyprint">credit_card</code>, <code class="prettyprint">bank_transfer</code>, <code class="prettyprint">cash</code>, <code class="prettyprint">paypal</code>)</td>
+</tr>
+<tr>
+<td><strong>address</strong></td>
+<td>See address json structure.</td>
+</tr>
+<tr>
+<td><strong>rooms</strong> &gt; <strong>code</strong></td>
+<td>The room code.</td>
+</tr>
+<tr>
+<td><strong>rooms</strong> &gt; <strong>state</strong></td>
+<td>The line item state in reservation. (<code class="prettyprint">confirmed</code>, <code class="prettyprint">canceled</code>, <code class="prettyprint">reserved</code>)</td>
+</tr>
+</tbody></table>
+
+<p>*blank: Empty or Null</p>
+
+          <h1 id="real-time">Real-time</h1>
+
+<h2 id="real-time-push-reservation">Real-time Push Reservation</h2>
+
+<blockquote>
+<p>The POST you will see coming will look like this:</p>
+</blockquote>
+<pre class="highlight shell"><code><span class="s2">"https://yourdomain.com/callback?token={TOKEN}&amp;hr_id={HR_ID}&amp;data={JSON_RESERVATION_DATA}"</span>
+</code></pre>
+
+<blockquote>
+<p>The above url includes JSON data structured like this:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+      </span><span class="s2">"hr_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R754208185"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"provider_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32423234422"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"channel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Booking.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"confirmed"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"guest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"cancel_reason"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-21T10:01:25Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-21T09:02:51Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"sub_total"</span><span class="p">:</span><span class="w"> </span><span class="mf">370.0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"extras_total"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"adjustments_total"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"tax_total"</span><span class="p">:</span><span class="w"> </span><span class="mf">30.0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mf">400.0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EUR"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"checkin_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-11"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"checkout_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-12"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"payment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"credit_card"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Istanbul"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Turkey"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90955223454"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"guest@example.net"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bagdat Cad. Istanbul"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"street_2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"rooms"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"15571"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reserved"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HR:10105"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">200.0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"nights"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"total_guest"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"total_adult"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"child_ages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+          </span><span class="p">],</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Queen Room - Disability Access - Deluxe Rate"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"checkin_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-11"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"checkout_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-12"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"extra_info"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Room Extra Info:Modern bir şekilde dekore edilmiş bu stüdyoda çalışma masası ve özel banyo bulunmaktadır.\nMeal Plan:Kahvaltı oda fiyatına dahildir.\nNon-Smoking Room"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"daily_prices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-11"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.0"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">],</span><span class="w">
+          </span><span class="s2">"extras"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"15572"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reserved"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HR:10105"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">200.0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"nights"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"total_guest"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"total_adult"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"child_ages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+          </span><span class="p">],</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Single Room - Non Refundable Rate"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"checkin_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-11"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"checkout_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-12"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"extra_info"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Room Extra Info:Modern bir şekilde dekore edilmiş bu stüdyoda çalışma masası ve özel banyo bulunmaktadır.\nMeal Plan:Kahvaltı oda fiyatına dahildir.\nNon-Smoking Room"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"daily_prices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-11"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.0"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">],</span><span class="w">
+          </span><span class="s2">"extras"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+
+<p>Real-time push reservations provide your application with instant notifications of new/updated reservations as
+they are received by HotelRunner.</p>
+
+<h3 id="create-a-callback-url">Create a Callback URL</h3>
+
+<p>When we have new updates to send your server, we do a simple POST with a payload containing updates to a URL on your server.
+This callback URL must be HTTPS and support POST method.</p>
+
+<p><code class="prettyprint">https://yourdomain.com/callback</code></p>
+
+<p>For instance, the POST you will see coming will look like this:</p>
+
+<p><code class="prettyprint">https://yourdomain.com/callback?token={TOKEN}&amp;hr_id={HR_ID}&amp;data={JSON_RESERVATION_DATA}</code></p>
+
+<h3 id="reservation-object">Reservation Object</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>hr_number</strong></td>
+<td>Reservation code on HotelRunner</td>
+</tr>
+<tr>
+<td><strong>provider_number</strong></td>
+<td>Reservation code on Sales Channel (can be blank*)</td>
+</tr>
+<tr>
+<td><strong>channel</strong></td>
+<td>Sales channel name (can be blank*)</td>
+</tr>
+<tr>
+<td><strong>state</strong></td>
+<td>Reservation status on HotelRunner (<code class="prettyprint">confirmed</code>, <code class="prettyprint">canceled</code>, <code class="prettyprint">complete</code>)</td>
+</tr>
+<tr>
+<td><strong>guest</strong></td>
+<td>Guest name, who made the reservation</td>
+</tr>
+<tr>
+<td><strong>cancel_reason</strong></td>
+<td>Cancel reason (can be blank*)</td>
+</tr>
+<tr>
+<td><strong>completed_at</strong></td>
+<td>The time that shows when HotelRunner received the reservation (UTC)</td>
+</tr>
+<tr>
+<td><strong>updated_at</strong></td>
+<td>The time that shows when HotelRunner received the latest update (UTC)</td>
+</tr>
+<tr>
+<td><strong>sub_total</strong></td>
+<td>Sub total (tax not included)</td>
+</tr>
+<tr>
+<td><strong>extras_total</strong></td>
+<td>Extras total (tax not included)</td>
+</tr>
+<tr>
+<td><strong>adjustments_total</strong></td>
+<td>Adjustments total (Price adjustments total that made by Property Admin)</td>
+</tr>
+<tr>
+<td><strong>tax_total</strong></td>
+<td>Tax total</td>
+</tr>
+<tr>
+<td><strong>total</strong></td>
+<td>Grand total</td>
+</tr>
+<tr>
+<td><strong>currency</strong></td>
+<td>Currency (ISO-4217)</td>
+</tr>
+<tr>
+<td><strong>checkin_date</strong></td>
+<td>Check-in Date</td>
+</tr>
+<tr>
+<td><strong>checkout_date</strong></td>
+<td>Check-out Date</td>
+</tr>
+<tr>
+<td><strong>note</strong></td>
+<td>Guest note (can be blank*)</td>
+</tr>
+<tr>
+<td><strong>payment</strong></td>
+<td>Payment method information (<code class="prettyprint">credit_card</code>, <code class="prettyprint">bank_transfer</code>, <code class="prettyprint">cash</code>, <code class="prettyprint">paypal</code>)</td>
+</tr>
+<tr>
+<td><strong>address</strong></td>
+<td>See address json structure.</td>
+</tr>
+<tr>
+<td><strong>rooms</strong> &gt; <strong>code</strong></td>
+<td>The room code.</td>
+</tr>
+<tr>
+<td><strong>rooms</strong> &gt; <strong>state</strong></td>
+<td>The line item state in reservation. (<code class="prettyprint">confirmed</code>, <code class="prettyprint">canceled</code>, <code class="prettyprint">reserved</code>)</td>
+</tr>
+</tbody></table>
+
+<p>*blank: Empty or Null</p>
+
+          <h1 id="errors">Errors</h1>
+
+<p>The HotelRunner Apps API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request - Missing required parameter</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized &ndash; Your API key is wrong</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable &ndash; You requested a format that isn&rsquo;t json</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone</td>
+</tr>
+<tr>
+<td>422</td>
+<td>Invalid resource</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error &ndash; We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable &ndash; We&rsquo;re temporarially offline for maintanance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="curl">curl</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
