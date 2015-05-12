@@ -122,7 +122,7 @@ Name | Description
 **updated_at** | The time that shows when HotelRunner received the latest update (UTC)
 **sub_total** | Sub total (tax not included)
 **extras_total** | Extras total (tax not included)
-**adjustments_total** | Adjustments total (Price adjustments total that made by Hotel Admin)
+**adjustments_total** | Adjustments total (Price adjustments total that made by Property Admin)
 **tax_total** | Tax total
 **total** | Grand total
 **currency** | Currency (ISO-4217)
