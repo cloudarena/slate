@@ -74,8 +74,8 @@ Parameter | Default | Required | Description
 **vid** | - | Yes | Room code that will be updated.
 **availability** | - | No | Don't send this parameter if you don't want to update availability.
 **price** | - | No | Don't send this parameter if you don't want to update price.
-**stop_sale** | - | No | Don't send this parameter if you don't want to update price. Accepted values: `1` or `0`
-**min_stay** | - | No | Don't send this parameter if you don't want to update price.
+**stop_sale** | - | No | Don't send this parameter if you don't want to update stop sale. Accepted values: `1` or `0`
+**min_stay** | - | No | Don't send this parameter if you don't want to update min_stay.
 **start_date** | - | Yes | Format: `YYYY-MM-DD` Start date
 **end_date** | - | Yes | Format: `YYYY-MM-DD` End date
 **days** | [0,1,2,3,4,5,6] | No | Used to update specific week days within given date range. (Sunday: 0)
