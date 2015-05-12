@@ -21,10 +21,10 @@ curl "https://app.hotelrunner.com/api/v1/apps/reservations?token={TOKEN}&hr_id={
           "completed_at": "2015-01-21T10:01:25Z",
           "updated_at": "2015-01-21T09:02:51Z",
           "sub_total": 185.0,
-          "extras_total": 0.0,
+          "extras_total": 45.0,
           "adjustments_total": 0.0,
           "tax_total": 15.0,
-          "total": 200.0,
+          "total": 245.0,
           "currency": "EUR",
           "checkin_date": "2015-01-11",
           "checkout_date": "2015-01-12",
@@ -57,9 +57,12 @@ curl "https://app.hotelrunner.com/api/v1/apps/reservations?token={TOKEN}&hr_id={
               "daily_prices": [
 
               ],
-              "extras": [
-
-              ]
+	          "extras": [
+	            {
+	              "name": "Airport Transfer (1 Person)",
+	              "price": "45.0"
+	            }
+	          ]
             }
           }
         }
