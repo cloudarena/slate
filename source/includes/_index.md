@@ -1,7 +1,7 @@
 
 # Introduction
 
-Welcome to the HotelRunner Apps ApI! You can use our Apps Api to access HotelRunner's api endpoints,
+Welcome to the HotelRunner Apps API! You can use our Apps API to access HotelRunner's api endpoints,
 which can get information on rooms, reservations, make price & availability updates and even receive real-time reservation updates.
 
 You can view code examples in the dark area to the right.
