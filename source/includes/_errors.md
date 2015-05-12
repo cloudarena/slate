@@ -12,7 +12,7 @@ Error Code | Meaning
 405 | Method Not Allowed
 406 | Not Acceptable -- You requested a format that isn't json
 410 | Gone
-422 | Invalid resource
+422 | Invalid Resource
 429 | Too Many Requests
 500 | Internal Server Error -- We had a problem with our server. Try again later.
 503 | Service Unavailable -- We're temporarially offline for maintanance. Please try again later.
