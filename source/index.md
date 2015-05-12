@@ -6,7 +6,7 @@ language_tabs:
 
 toc_footers:
   - <a href='http://support.hotelrunner.com?ref=api_docs'>Support</a>
-  - <a href='https://app.hotelrunner.com/signup?pk_campaign=api_docs'>Free Sign Up</a>
+  - <a class='sign_up_links' href='https://app.hotelrunner.com/signup?pk_campaign=api_docs'><span>SIGN UP FREE</span></a>
 
 includes:
   - index
