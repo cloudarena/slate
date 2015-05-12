@@ -97,10 +97,12 @@ Name | Description
 **cancel_reason** | Cancel reason (can be blank*)
 **completed_at** | The time that shows when HotelRunner received the reservation (UTC)
 **updated_at** | The time that shows when HotelRunner received the latest update (UTC)
-**sub_total** | Sub total without taxes & fees
+**sub_total** | Sub total (tax not included)
+**extras_total** | Extras total (tax not included)
+**adjustments_total** | Adjustments total (Price adjustments total that made by Hotel Admin)
 **tax_total** | Tax total
 **total** | Grand total
-**currency** | Currency
+**currency** | Currency (ISO-4217)
 **checkin_date** | Check-in Date
 **checkout_date** | Check-out Date
 **note** | Guest note (can be blank*)
