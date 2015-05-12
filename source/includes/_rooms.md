@@ -45,7 +45,7 @@ Name | Description
 **description** | Description of room
 **policy** | Free text policy for room
 **room_capacity** | Maximum room capacity including children
-**adult_capacity** | Maximum adult capacity can stay in room
+**adult_capacity** | Maximum adult count that can stay in room
 
 
 ## Update Room

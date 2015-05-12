@@ -10,8 +10,8 @@ toc_footers:
 
 includes:
   - index
-  - reservations
   - rooms
+  - reservations
   - realtime
   - errors
 
