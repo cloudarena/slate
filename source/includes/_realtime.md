@@ -57,7 +57,7 @@
           "daily_prices": [
             {
               "date": "2015-01-11",
-              "price": "100.0"
+              "price": "200.0"
             }
           ],
           "extras": [
@@ -81,7 +81,7 @@
           "daily_prices": [
             {
               "date": "2015-01-11",
-              "price": "100.0"
+              "price": "200.0"
             }
           ],
           "extras": [

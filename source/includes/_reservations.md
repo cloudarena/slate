@@ -55,7 +55,10 @@ curl "https://app.hotelrunner.com/api/v1/apps/reservations?token={TOKEN}&hr_id={
               "checkout_date": "2015-01-12",
               "extra_info": "Room Extra Info:Modern bir şekilde dekore edilmiş bu stüdyoda çalışma masası ve özel banyo bulunmaktadır.\nMeal Plan:Kahvaltı oda fiyatına dahildir.\nNon-Smoking Room",
               "daily_prices": [
-
+				{
+	              "date": "2015-01-11",
+	              "price": "200.0"
+	            }
               ],
 	          "extras": [
 	            {
