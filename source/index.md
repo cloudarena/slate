@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: HotelRunner Apps API Reference
 
 language_tabs:
   - curl
@@ -12,7 +12,6 @@ includes:
   - index
   - reservations
   - rooms
-  - updates
   - realtime
   - errors
 
