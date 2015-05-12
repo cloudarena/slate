@@ -113,7 +113,7 @@ Name | Description
 **hr_number** | Reservation code on HotelRunner
 **provider_number** | Reservation code on Sales Channel (can be blank*)
 **channel** | Sales channel name (can be blank*)
-**state** | Reservation status on HotelRunner
+**state** | Reservation status on HotelRunner (`confirmed`, `canceled`, `complete`)
 **guest** | Guest name, who made the reservation
 **cancel_reason** | Cancel reason (can be blank*)
 **completed_at** | The time that shows when HotelRunner received the reservation (UTC)
@@ -125,9 +125,10 @@ Name | Description
 **checkin_date** | Check-in Date
 **checkout_date** | Check-out Date
 **note** | Guest note (can be blank*)
-**payment** | Payment method information
+**payment** | Payment method information (`credit_card`, `bank_transfer`, `cash`, `paypal`)
 **address** | See address json structure.
 **rooms** > **code** | The room code.
+**rooms** > **state** | The line item state in reservation. (`confirmed`, `canceled`, `reserved`)
 
 
 

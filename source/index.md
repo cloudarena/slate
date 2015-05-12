@@ -3,11 +3,10 @@ title: API Reference
 
 language_tabs:
   - curl
-  - ruby
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
+  - <a href='https://support.hotelrunner.com?ref=api_docs'>Support</a>
+  - <a href='https://app.hotelrunner.com/signup?pk_campaign=api_docs'>Free Sign Up</a>
 
 includes:
   - index
