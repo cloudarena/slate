@@ -12,7 +12,6 @@ includes:
   - index
   - reservations
   - rooms
-  - updates
   - realtime
   - errors
 
