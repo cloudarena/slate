@@ -22,7 +22,7 @@ curl "https://app.hotelrunner.com/api/v1/apps/reservations?token={TOKEN}&hr_id={
           "updated_at": "2015-01-21T09:02:51Z",
           "sub_total": 185.0,
           "extras_total": 0.0,
-          "adjustments_total": 0,0,
+          "adjustments_total": 0.0,
           "tax_total": 15.0,
           "total": 200.0,
           "currency": "EUR",

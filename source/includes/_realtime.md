@@ -22,7 +22,7 @@
       "updated_at": "2015-01-21T09:02:51Z",
       "sub_total": 370.0,
       "extras_total": 0.0,
-      "adjustments_total": 0,0,
+      "adjustments_total": 0.0,
       "tax_total": 30.0,
       "total": 400.0,
       "currency": "EUR",
