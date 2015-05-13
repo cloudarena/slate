@@ -91,6 +91,10 @@
       }
     }
 
+> The response on your side must be:
+
+'ok'
+
 ```
 
 Real-time push reservations provide your application with instant notifications of new/updated reservations as

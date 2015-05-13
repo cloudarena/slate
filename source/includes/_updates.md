@@ -27,7 +27,7 @@ curl "https://app.hotelrunner.com/api/v1/apps/reservations?token={TOKEN}&hr_id={
 ]
 ```
 
-This endpoint updates room.
+This endpoint updates the room.
 
 ### HTTP Request
 
