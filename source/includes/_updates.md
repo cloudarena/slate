@@ -27,7 +27,7 @@ curl "https://app.hotelrunner.com/api/v1/apps/reservations?token={TOKEN}&hr_id={
 ]
 ```
 
-This endpoint retrieves all reservations with pagination.
+This endpoint updates room.
 
 ### HTTP Request
 
