@@ -62,7 +62,7 @@ curl -X PUT --data "hr_id={HR_ID}&token={TOKEN}&vid={ROOM_CODE}&start_date={STAR
 ```
 
 
-This endpoint retrieves all rooms of property.
+This endpoint updates the room.
 
 
 `PUT https://app.hotelrunner.com/api/v1/apps/rooms/~`
