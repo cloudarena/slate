@@ -9,11 +9,16 @@ toc_footers:
   - <a href='http://hotelrunner.com/en/terms?pk_campaign=api_docs'>Terms & Conditions</a>
   - <a class='sign_up_links' href='https://app.hotelrunner.com/signup?pk_campaign=api_docs'><span>SIGN UP FREE</span></a>
 
-includes:
+property_includes:
   - index
   - rooms
   - reservations
   - realtime
+  
+agency_includes:
+  - agency
+
+default_includes:
   - errors
 
 
