@@ -1,4 +1,4 @@
-# Channels (Property)
+# Channels [Property]
 
 ## Get HotelRunner Channel List
 
