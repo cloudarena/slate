@@ -435,6 +435,7 @@ which can get information on rooms, reservations, make price &amp; availability 
 <p>The above url includes JSON data structured like this:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"modify"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"hr_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R754208185"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"provider_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32423234422"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"channel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Booking.com"</span><span class="p">,</span><span class="w">
@@ -546,6 +547,10 @@ This callback URL must be HTTPS and support POST method.</p>
 <tr>
 <td><strong>hr_number</strong></td>
 <td>Reservation code on HotelRunner</td>
+</tr>
+<tr>
+<td><strong>status</strong></td>
+<td>Reason of push notification: `modify``cancel` `confirm` </td>
 </tr>
 <tr>
 <td><strong>provider_number</strong></td>
