@@ -1,4 +1,4 @@
-# Rooms (Property)
+# Rooms [Property]
 
 ## Get Room List
 

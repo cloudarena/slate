@@ -1,4 +1,4 @@
-# Reservations (Property)
+# Reservations [Property]
 
 ## Get All Reservations
 

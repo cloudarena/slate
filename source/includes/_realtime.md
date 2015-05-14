@@ -1,4 +1,4 @@
-# Real-time (Property)
+# Real-time [Property]
 
 ## Real-time Push Reservation
 

@@ -1,6 +1,6 @@
 <!-- This section removed from first navbar with toc-ignore.This section added with manualy to second navbar -->
 
-## Search (Agency)
+## Search [Agency]
 
 ```shell
 curl "http://[affiliate_url]/api/affiliate_stores/search"
@@ -45,7 +45,7 @@ token | - | Yes | About security access
 property_name | - | Yes | -
 location | - | Yes | -
 
-## Auto complete (Agency)
+## Auto complete [Agency]
 
 ```shell
 curl "http://[affiliate_url]/api/affiliate_stores/auto-complete"
@@ -85,7 +85,7 @@ Parameter | Default | Required | Description
 token     |    -    |    Yes   | About security access
 property_name   | - |       Yes  | This is used as keyword to search properties
 
-## Detail (Agency)
+## Detail [Agency]
 
 ```shell
 curl "http://[affiliate_url]/api/affiliate_stores/detail"
