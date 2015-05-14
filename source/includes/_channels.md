@@ -1,4 +1,4 @@
-# Rooms (Property)
+# Channels (Property)
 
 ## Get HotelRunner Channel List
 
