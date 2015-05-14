@@ -11,10 +11,11 @@ toc_footers:
 
 property_includes:
   - index
+  - channels
   - rooms
   - reservations
   - realtime
-  
+
 agency_includes:
   - agency
 

@@ -12,6 +12,7 @@
 
 ```json
 {
+      "reason": "modify",
       "hr_number": "R754208185",
       "provider_number": "32423234422",
       "channel": "Booking.com",
@@ -115,10 +116,11 @@ For instance, the POST you will see coming will look like this:
 
 Name | Description
 ------------ | ------
+**reason** | Reason of push notification: (`modify`, `cancel`, `confirm`)
 **hr_number** | Reservation code on HotelRunner
 **provider_number** | Reservation code on Sales Channel (can be blank*)
-**channel** | Sales channel name (can be blank*)
-**state** | Reservation status on HotelRunner (`confirmed`, `canceled`, `complete`)
+**channel** | Sales channel code (can be blank*)
+**state** | Reservation status on HotelRunner (`reserved`,`confirmed`, `canceled`)*
 **guest** | Guest name, who made the reservation
 **cancel_reason** | Cancel reason (can be blank*)
 **completed_at** | The time that shows when HotelRunner received the reservation (UTC)
@@ -135,8 +137,14 @@ Name | Description
 **payment** | Payment method information (`credit_card`, `bank_transfer`, `cash`, `paypal`)
 **address** | See address json structure.
 **rooms** > **code** | The room code.
-**rooms** > **state** | The line item state in reservation. (`confirmed`, `canceled`, `reserved`)
+**rooms** > **state** | The line item state in reservation. (`reserved`,`confirmed`, `canceled`)*
 
 
 
 *blank: Empty or Null
+
+*payment: We don't share credit card information.
+
+*reserved: Initial state of reservation.
+
+*confirmed: Next state of reservation when Hotelier confirms it.
