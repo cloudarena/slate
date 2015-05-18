@@ -3,7 +3,7 @@
 ## Search [Agency]
 
 ```shell
-curl "http://[affiliate_url]/api/affiliate_stores/search"
+curl "http://api-test-agency.hotelrunner.com/api/affiliate_stores/search"
 ```
 
 > The above command returns JSON structured like this:
@@ -35,7 +35,7 @@ This endpoint retrieves available properties with pagination.
 
 ### HTTP REQUEST
 
-GET http://[affiliate_url]/api/affiliate_stores/search
+GET http://api-test-agency.hotelrunner.com/api/affiliate_stores/search
 
 ### QUERY PARAMETERS
 
@@ -48,7 +48,7 @@ location | - | Yes | -
 ## Auto complete [Agency]
 
 ```shell
-curl "http://[affiliate_url]/api/affiliate_stores/auto-complete"
+curl "http://api-test-agency.hotelrunner.com/api/affiliate_stores/auto-complete"
 ```
 
 > The above command returns JSON structured like this:
@@ -76,7 +76,7 @@ This endpoint retrieves available properties and addresses.(Only code and name o
 
 ### HTTP REQUEST
 
-GET http://butik-oteller-test.com/api/affiliate_stores/auto-complete
+GET http://api-test-agency.hotelrunner.com/api/affiliate_stores/auto-complete
 
 ### QUERY PARAMETERS
 
@@ -88,7 +88,7 @@ property_name   | - |       Yes  | This is used as keyword to search properties
 ## Detail [Agency]
 
 ```shell
-curl "http://[affiliate_url]/api/affiliate_stores/detail"
+curl "http://api-test-agency.hotelrunner.com/api/affiliate_stores/detail"
 ```
 
 > The above command returns JSON structured like this:
@@ -164,7 +164,7 @@ This endpoint retrieves available property (Includes extra details of property l
 
 ### HTTP REQUEST
 
-GET http://butik-oteller-test.com/api/affiliate_stores/detail
+GET http://api-test-agency.hotelrunner.com/api/affiliate_stores/detail
 
 ### QUERY PARAMETERS
 
