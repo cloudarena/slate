@@ -193,7 +193,7 @@ which can get information on rooms, reservations, make price &amp; availability 
 <pre class="highlight json"><code><span class="p">[</span><span class="w">
 
   </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HR_1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HR:1"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Standard Room"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Standard Room Description"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"policy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Standard Room Policy"</span><span class="p">,</span><span class="w">
@@ -202,7 +202,16 @@ which can get information on rooms, reservations, make price &amp; availability 
     </span><span class="s2">"channel_codes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"bookingcom"</span><span class="p">,</span><span class="w"> </span><span class="s2">"online"</span><span class="p">,</span><span class="w"> </span><span class="s2">"hrs"</span><span class="p">,</span><span class="w"> </span><span class="s2">"expedia"</span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HR_2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NR:HR:1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Standard Room - NR"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Standard Room Description"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"policy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Standard Room Policy"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"room_capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"adult_capacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"channel_codes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"bookingcom"</span><span class="p">,</span><span class="w"> </span><span class="s2">"online"</span><span class="p">,</span><span class="w"> </span><span class="s2">"hrs"</span><span class="p">,</span><span class="w"> </span><span class="s2">"expedia"</span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HR:2"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Double Room"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Double Room Description"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"policy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Double Room Policy"</span><span class="p">,</span><span class="w">
@@ -229,7 +238,7 @@ which can get information on rooms, reservations, make price &amp; availability 
 </thead><tbody>
 <tr>
 <td><strong>code</strong></td>
-<td>Room code on HotelRunner</td>
+<td>Room code on HotelRunner (<code class="prettyprint">NR</code> means Non refundable)</td>
 </tr>
 <tr>
 <td><strong>name</strong></td>
@@ -381,6 +390,7 @@ which can get information on rooms, reservations, make price &amp; availability 
               </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reserved"</span><span class="p">,</span><span class="w">
               </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HR:10105"</span><span class="p">,</span><span class="w">
               </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">200.0</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"non_refundable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
               </span><span class="s2">"nights"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
               </span><span class="s2">"total_guest"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
               </span><span class="s2">"total_adult"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
