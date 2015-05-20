@@ -44,6 +44,7 @@ curl "https://app.hotelrunner.com/api/v1/apps/reservations?token={TOKEN}&hr_id={
               "state": "reserved",
               "code": "HR:10105",
               "price": 200.0,
+			  "non_refundable": false,
               "nights": 1,
               "total_guest": 2,
               "total_adult": 2,

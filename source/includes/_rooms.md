@@ -12,7 +12,7 @@ curl "https://app.hotelrunner.com/api/v1/apps/rooms?token={TOKEN}&hr_id={HR_ID}"
 [
 
   {
-    "code": "HR_1",
+    "code": "HR:1",
     "name": "Standard Room",
     "description": "Standard Room Description",
     "policy": "Standard Room Policy",
@@ -21,7 +21,16 @@ curl "https://app.hotelrunner.com/api/v1/apps/rooms?token={TOKEN}&hr_id={HR_ID}"
     "channel_codes": ["bookingcom", "online", "hrs", "expedia"]
   },
   {
-    "code": "HR_2",
+    "code": "NR:HR:1",
+    "name": "Standard Room - NR",
+    "description": "Standard Room Description",
+    "policy": "Standard Room Policy",
+    "room_capacity": 3,
+    "adult_capacity": 2,
+    "channel_codes": ["bookingcom", "online", "hrs", "expedia"]
+  },
+  {
+    "code": "HR:2",
     "name": "Double Room",
     "description": "Double Room Description",
     "policy": "Double Room Policy",
@@ -42,7 +51,7 @@ This endpoint retrieves all rooms of property.
 
 Name | Description
 ------------ | ------
-**code** | Room code on HotelRunner
+**code** | Room code on HotelRunner (`NR` means Non refundable)
 **name** | Name of room
 **description** | Description of room
 **policy** | Free text policy for room
