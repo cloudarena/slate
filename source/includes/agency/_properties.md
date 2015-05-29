@@ -1,9 +1,11 @@
 <!-- This section removed from first navbar with toc-ignore.This section added with manualy to second navbar -->
 
+# Properties [Agency]
+
 ## Search [Agency]
 
 ```shell
-curl "http://api-test-agency.hotelrunner.com/api/affiliate_stores/search"
+curl "http://app.hotelrunner.com/api/v1/apps/agency/properties/search?token={TOKEN}&hr_id={HR_ID}"
 ```
 
 > The above command returns JSON structured like this:
@@ -35,20 +37,19 @@ This endpoint retrieves available properties with pagination.
 
 ### HTTP REQUEST
 
-GET http://api-test-agency.hotelrunner.com/api/affiliate_stores/search
+GET http://app.hotelrunner.com/api/v1/apps/agency/properties/search
 
 ### QUERY PARAMETERS
 
 Parameter | Default | Required | Description
 --------- | ------- | ---------|-----------
-token | - | Yes | About security access
-property_name | - | Yes | -
+property_name | - | No | -
 location | - | Yes | -
 
 ## Auto complete [Agency]
 
 ```shell
-curl "http://api-test-agency.hotelrunner.com/api/affiliate_stores/auto-complete"
+curl "http://app.hotelrunner.com/api/v1/apps/agency/properties/auto_complete?token={TOKEN}&hr_id={HR_ID}"
 ```
 
 > The above command returns JSON structured like this:
@@ -76,19 +77,18 @@ This endpoint retrieves available properties and addresses.(Only code and name o
 
 ### HTTP REQUEST
 
-GET http://api-test-agency.hotelrunner.com/api/affiliate_stores/auto-complete
+GET http://app.hotelrunner.com/api/v1/apps/agency/properties/auto_complete
 
 ### QUERY PARAMETERS
 
 Parameter | Default | Required | Description
 --------- | ------- | ---------|-----------
-token     |    -    |    Yes   | About security access
 property_name   | - |       Yes  | This is used as keyword to search properties
 
 ## Detail [Agency]
 
 ```shell
-curl "http://api-test-agency.hotelrunner.com/api/affiliate_stores/detail"
+curl "http://app.hotelrunner.com/api/v1/apps/agency/properties/detail?token={TOKEN}&hr_id={HR_ID}"
 ```
 
 > The above command returns JSON structured like this:
@@ -164,13 +164,12 @@ This endpoint retrieves available property (Includes extra details of property l
 
 ### HTTP REQUEST
 
-GET http://api-test-agency.hotelrunner.com/api/affiliate_stores/detail
+GET http://app.hotelrunner.com/api/v1/apps/agency/properties/detail
 
 ### QUERY PARAMETERS
 
 Parameter | Default | Required | Description
 --------- | ------- | ---------|-----------
-token     |    -    |    Yes   | About security access
 property_code   | - |       Yes  | To access property detail
 
 
