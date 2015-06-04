@@ -5,7 +5,7 @@
 ## Search [Agency]
 
 ```shell
-curl "http://app.hotelrunner.com/api/v1/apps/agency/properties/search?token={TOKEN}&hr_id={HR_ID}"
+curl "https://app.hotelrunner.com/api/v1/apps/agency/properties/search?token={TOKEN}&hr_id={HR_ID}"
 ```
 
 > The above command returns JSON structured like this:
@@ -18,9 +18,9 @@ curl "http://app.hotelrunner.com/api/v1/apps/agency/properties/search?token={TOK
          "latitude":"40.978",
          "longitude":"28.86959999999999",
          "canonical_address":"Ataköy 1 Mh., Fişekhane Cd 4-56, 34140 Bakırköy/İstanbul, Turkey",
-         "name":"ilkayorhanlar-property6",
-         "code":"ilkayorhanlar-property6",
-         "url":"http://ilkayorhanlar.otamagic.com:3002/property/ilkayorhanlar-property6",
+         "name":"agency-property1",
+         "code":"agency-property",
+         "url":"https://app.hotelrunner.com/property/agency-property1",
          "currency":"TRY",
          "overview":null,
          "image_url":"noimage",
@@ -37,7 +37,7 @@ This endpoint retrieves available properties with pagination.
 
 ### HTTP REQUEST
 
-GET http://app.hotelrunner.com/api/v1/apps/agency/properties/search
+GET https://app.hotelrunner.com/api/v1/apps/agency/properties/search
 
 ### QUERY PARAMETERS
 
@@ -49,7 +49,7 @@ location | - | Yes | -
 ## Auto complete [Agency]
 
 ```shell
-curl "http://app.hotelrunner.com/api/v1/apps/agency/properties/auto_complete?token={TOKEN}&hr_id={HR_ID}"
+curl "https://app.hotelrunner.com/api/v1/apps/agency/properties/auto_complete?token={TOKEN}&hr_id={HR_ID}"
 ```
 
 > The above command returns JSON structured like this:
@@ -59,12 +59,12 @@ curl "http://app.hotelrunner.com/api/v1/apps/agency/properties/auto_complete?tok
    "results":{  
       "properties":[  
          {  
-            "code":"ilkayorhanlar-property5",
-            "name":"ilkayorhanlar-property5"
+            "code":"agency-property1",
+            "name":"agency-property1"
          },
          {  
-            "code":"ilkayorhanlar-property6",
-            "name":"ilkayorhanlar-property6"
+            "code":"agency-property2",
+            "name":"agency-property2"
          }
       ],
       "addresses":[  
@@ -77,7 +77,7 @@ This endpoint retrieves available properties and addresses.(Only code and name o
 
 ### HTTP REQUEST
 
-GET http://app.hotelrunner.com/api/v1/apps/agency/properties/auto_complete
+GET https://app.hotelrunner.com/api/v1/apps/agency/properties/auto_complete
 
 ### QUERY PARAMETERS
 
@@ -88,7 +88,7 @@ property_name   | - |       Yes  | This is used as keyword to search properties
 ## Detail [Agency]
 
 ```shell
-curl "http://app.hotelrunner.com/api/v1/apps/agency/properties/detail?token={TOKEN}&hr_id={HR_ID}"
+curl "https://app.hotelrunner.com/api/v1/apps/agency/properties/detail?token={TOKEN}&hr_id={HR_ID}"
 ```
 
 > The above command returns JSON structured like this:
@@ -100,9 +100,9 @@ curl "http://app.hotelrunner.com/api/v1/apps/agency/properties/detail?token={TOK
       "latitude":"40.978",
       "longitude":"28.86959999999999",
       "canonical_address":"Ataköy 1 Mh., Fişekhane Cd 4-56, 34140 Bakırköy/İstanbul, Turkey",
-      "name":"ilkayorhanlar-property6",
-      "code":"ilkayorhanlar-property6",
-      "url":"http://ilkayorhanlar.otamagic.com:3002/property/ilkayorhanlar-property6",
+      "name":"agency-property1",
+      "code":"agency-property1",
+      "url":"https://app.hotelrunner.com/property/agency-property1",
       "currency":"TRY",
       "overview":null,
       "from_price":1.0,
@@ -125,11 +125,11 @@ curl "http://app.hotelrunner.com/api/v1/apps/agency/properties/detail?token={TOK
       ],
       "images":[  
          {  
-            "url":"/spree/products/original/a9aea63c-672a-4f19-a23c-310f5e4b197d.jpg",
+            "url":"http://cdn-cms1.hotelrunner.com/assets/photos/original/f46abbff-9693-4586-a463-770ccd998b20.jpg",
             "alt":null
          },
          {  
-            "url":"/spree/products/original/3d0f2278-dbd0-4742-b955-97aedb50290d.jpg",
+            "url":"http://cdn-cms1.hotelrunner.com/assets/photos/original/f46abbff-9693-4586-a463-770ccd998b21.jpg",
             "alt":null
          }
       ],
@@ -137,7 +137,7 @@ curl "http://app.hotelrunner.com/api/v1/apps/agency/properties/detail?token={TOK
          {  
             "images":[  
                {  
-                  "url":"/spree/products/large/74051365-fc65-4590-ade3-b42c774187e8.jpg",
+                  "url":"http://cdn-cms2.hotelrunner.com/assets/photos/large/97eeffe8-a1c8-4753-bf35-dcd15d0b5c09.jpg",
                   "alt":null
                }
             ],
@@ -148,7 +148,7 @@ curl "http://app.hotelrunner.com/api/v1/apps/agency/properties/detail?token={TOK
          {  
             "images":[  
                {  
-                  "url":"/spree/products/large/b234593f-f49b-4071-bd19-65ee545dbff9.jpg",
+                  "url":"http://cdn-cms2.hotelrunner.com/assets/photos/large/97eeffe8-a1c8-4753-bf35-dcd15d0b5c11.jpg",
                   "alt":null
                }
             ],
@@ -164,7 +164,7 @@ This endpoint retrieves available property (Includes extra details of property l
 
 ### HTTP REQUEST
 
-GET http://app.hotelrunner.com/api/v1/apps/agency/properties/detail
+GET https://app.hotelrunner.com/api/v1/apps/agency/properties/detail
 
 ### QUERY PARAMETERS
 
