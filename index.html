@@ -791,10 +791,27 @@ This callback URL must be HTTPS and support POST method.</p>
         </section>
 
         <section class='content'> <header id='for_agencies'>For Agencies</header>
+          <h1 id="introduction-[agency]">Introduction [Agency]</h1>
+
+<p>Welcome to the HotelRunner Apps API! You can use our Apps API to access HotelRunner&rsquo;s api endpoints,
+which can get information on reservations, properties</p>
+
+<p>You can view code examples in the dark area to the right.</p>
+
+<h1 id="authentication-[agency]">Authentication [Agency]</h1>
+
+<p>HotelRunner uses TOKEN and HR_ID keys to allow access to the API. You can register a new HotelRunner Apps API key at your agency panel under My Agency section.</p>
+
+<aside class="notice">
+<b><code>token</code></b> and <b><code>hr_id</code></b> parameters must be sent for authentication.
+</aside>
+
           <!-- This section removed from first navbar with toc-ignore.This section added with manualy to second navbar -->
 
+<h1 id="properties-[agency]">Properties [Agency]</h1>
+
 <h2 id="search-[agency]">Search [Agency]</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"http://api-test-agency.hotelrunner.com/api/affiliate_stores/search"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://app.hotelrunner.com/api/v1/apps/agency/properties/search?token={TOKEN}&amp;hr_id={HR_ID}"</span>
 </code></pre>
 
 <blockquote>
@@ -807,9 +824,9 @@ This callback URL must be HTTPS and support POST method.</p>
          </span><span class="s2">"latitude"</span><span class="p">:</span><span class="s2">"40.978"</span><span class="p">,</span><span class="w">
          </span><span class="s2">"longitude"</span><span class="p">:</span><span class="s2">"28.86959999999999"</span><span class="p">,</span><span class="w">
          </span><span class="s2">"canonical_address"</span><span class="p">:</span><span class="s2">"Ataköy 1 Mh., Fişekhane Cd 4-56, 34140 Bakırköy/İstanbul, Turkey"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"ilkayorhanlar-property6"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"code"</span><span class="p">:</span><span class="s2">"ilkayorhanlar-property6"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"http://ilkayorhanlar.otamagic.com:3002/property/ilkayorhanlar-property6"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"agency-property1"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"code"</span><span class="p">:</span><span class="s2">"agency-property"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"https://app.hotelrunner.com/property/agency-property1"</span><span class="p">,</span><span class="w">
          </span><span class="s2">"currency"</span><span class="p">:</span><span class="s2">"TRY"</span><span class="p">,</span><span class="w">
          </span><span class="s2">"overview"</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="w">
          </span><span class="s2">"image_url"</span><span class="p">:</span><span class="s2">"noimage"</span><span class="p">,</span><span class="w">
@@ -827,7 +844,7 @@ This callback URL must be HTTPS and support POST method.</p>
 
 <h3 id="http-request">HTTP REQUEST</h3>
 
-<p>GET http://api-test-agency.hotelrunner.com/api/affiliate_stores/search</p>
+<p>GET https://app.hotelrunner.com/api/v1/apps/agency/properties/search</p>
 
 <h3 id="query-parameters">QUERY PARAMETERS</h3>
 
@@ -840,15 +857,9 @@ This callback URL must be HTTPS and support POST method.</p>
 </tr>
 </thead><tbody>
 <tr>
-<td>token</td>
-<td>-</td>
-<td>Yes</td>
-<td>About security access</td>
-</tr>
-<tr>
 <td>property_name</td>
 <td>-</td>
-<td>Yes</td>
+<td>No</td>
 <td>-</td>
 </tr>
 <tr>
@@ -860,7 +871,7 @@ This callback URL must be HTTPS and support POST method.</p>
 </tbody></table>
 
 <h2 id="auto-complete-[agency]">Auto complete [Agency]</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"http://api-test-agency.hotelrunner.com/api/affiliate_stores/auto-complete"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://app.hotelrunner.com/api/v1/apps/agency/properties/auto_complete?token={TOKEN}&amp;hr_id={HR_ID}"</span>
 </code></pre>
 
 <blockquote>
@@ -870,12 +881,12 @@ This callback URL must be HTTPS and support POST method.</p>
    </span><span class="s2">"results"</span><span class="p">:{</span><span class="w">  
       </span><span class="s2">"properties"</span><span class="p">:[</span><span class="w">  
          </span><span class="p">{</span><span class="w">  
-            </span><span class="s2">"code"</span><span class="p">:</span><span class="s2">"ilkayorhanlar-property5"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"ilkayorhanlar-property5"</span><span class="w">
+            </span><span class="s2">"code"</span><span class="p">:</span><span class="s2">"agency-property1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"agency-property1"</span><span class="w">
          </span><span class="p">},</span><span class="w">
          </span><span class="p">{</span><span class="w">  
-            </span><span class="s2">"code"</span><span class="p">:</span><span class="s2">"ilkayorhanlar-property6"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"ilkayorhanlar-property6"</span><span class="w">
+            </span><span class="s2">"code"</span><span class="p">:</span><span class="s2">"agency-property2"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"agency-property2"</span><span class="w">
          </span><span class="p">}</span><span class="w">
       </span><span class="p">],</span><span class="w">
       </span><span class="s2">"addresses"</span><span class="p">:[</span><span class="w">  
@@ -889,7 +900,7 @@ This callback URL must be HTTPS and support POST method.</p>
 
 <h3 id="http-request">HTTP REQUEST</h3>
 
-<p>GET http://api-test-agency.hotelrunner.com/api/affiliate_stores/auto-complete</p>
+<p>GET https://app.hotelrunner.com/api/v1/apps/agency/properties/auto_complete</p>
 
 <h3 id="query-parameters">QUERY PARAMETERS</h3>
 
@@ -902,12 +913,6 @@ This callback URL must be HTTPS and support POST method.</p>
 </tr>
 </thead><tbody>
 <tr>
-<td>token</td>
-<td>-</td>
-<td>Yes</td>
-<td>About security access</td>
-</tr>
-<tr>
 <td>property_name</td>
 <td>-</td>
 <td>Yes</td>
@@ -916,7 +921,7 @@ This callback URL must be HTTPS and support POST method.</p>
 </tbody></table>
 
 <h2 id="detail-[agency]">Detail [Agency]</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"http://api-test-agency.hotelrunner.com/api/affiliate_stores/detail"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://app.hotelrunner.com/api/v1/apps/agency/properties/detail?token={TOKEN}&amp;hr_id={HR_ID}"</span>
 </code></pre>
 
 <blockquote>
@@ -928,9 +933,9 @@ This callback URL must be HTTPS and support POST method.</p>
       </span><span class="s2">"latitude"</span><span class="p">:</span><span class="s2">"40.978"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"longitude"</span><span class="p">:</span><span class="s2">"28.86959999999999"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"canonical_address"</span><span class="p">:</span><span class="s2">"Ataköy 1 Mh., Fişekhane Cd 4-56, 34140 Bakırköy/İstanbul, Turkey"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"ilkayorhanlar-property6"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"code"</span><span class="p">:</span><span class="s2">"ilkayorhanlar-property6"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"http://ilkayorhanlar.otamagic.com:3002/property/ilkayorhanlar-property6"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"agency-property1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"code"</span><span class="p">:</span><span class="s2">"agency-property1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"https://app.hotelrunner.com/property/agency-property1"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"currency"</span><span class="p">:</span><span class="s2">"TRY"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"overview"</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="s2">"from_price"</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span><span class="w">
@@ -953,11 +958,11 @@ This callback URL must be HTTPS and support POST method.</p>
       </span><span class="p">],</span><span class="w">
       </span><span class="s2">"images"</span><span class="p">:[</span><span class="w">  
          </span><span class="p">{</span><span class="w">  
-            </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"/spree/products/original/a9aea63c-672a-4f19-a23c-310f5e4b197d.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"http://cdn-cms1.hotelrunner.com/assets/photos/original/f46abbff-9693-4586-a463-770ccd998b20.jpg"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"alt"</span><span class="p">:</span><span class="kc">null</span><span class="w">
          </span><span class="p">},</span><span class="w">
          </span><span class="p">{</span><span class="w">  
-            </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"/spree/products/original/3d0f2278-dbd0-4742-b955-97aedb50290d.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"http://cdn-cms1.hotelrunner.com/assets/photos/original/f46abbff-9693-4586-a463-770ccd998b21.jpg"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"alt"</span><span class="p">:</span><span class="kc">null</span><span class="w">
          </span><span class="p">}</span><span class="w">
       </span><span class="p">],</span><span class="w">
@@ -965,7 +970,7 @@ This callback URL must be HTTPS and support POST method.</p>
          </span><span class="p">{</span><span class="w">  
             </span><span class="s2">"images"</span><span class="p">:[</span><span class="w">  
                </span><span class="p">{</span><span class="w">  
-                  </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"/spree/products/large/74051365-fc65-4590-ade3-b42c774187e8.jpg"</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"http://cdn-cms2.hotelrunner.com/assets/photos/large/97eeffe8-a1c8-4753-bf35-dcd15d0b5c09.jpg"</span><span class="p">,</span><span class="w">
                   </span><span class="s2">"alt"</span><span class="p">:</span><span class="kc">null</span><span class="w">
                </span><span class="p">}</span><span class="w">
             </span><span class="p">],</span><span class="w">
@@ -976,7 +981,7 @@ This callback URL must be HTTPS and support POST method.</p>
          </span><span class="p">{</span><span class="w">  
             </span><span class="s2">"images"</span><span class="p">:[</span><span class="w">  
                </span><span class="p">{</span><span class="w">  
-                  </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"/spree/products/large/b234593f-f49b-4071-bd19-65ee545dbff9.jpg"</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"http://cdn-cms2.hotelrunner.com/assets/photos/large/97eeffe8-a1c8-4753-bf35-dcd15d0b5c11.jpg"</span><span class="p">,</span><span class="w">
                   </span><span class="s2">"alt"</span><span class="p">:</span><span class="kc">null</span><span class="w">
                </span><span class="p">}</span><span class="w">
             </span><span class="p">],</span><span class="w">
@@ -993,7 +998,7 @@ This callback URL must be HTTPS and support POST method.</p>
 
 <h3 id="http-request">HTTP REQUEST</h3>
 
-<p>GET http://api-test-agency.hotelrunner.com/api/affiliate_stores/detail</p>
+<p>GET https://app.hotelrunner.com/api/v1/apps/agency/properties/detail</p>
 
 <h3 id="query-parameters">QUERY PARAMETERS</h3>
 
@@ -1006,18 +1011,233 @@ This callback URL must be HTTPS and support POST method.</p>
 </tr>
 </thead><tbody>
 <tr>
-<td>token</td>
-<td>-</td>
-<td>Yes</td>
-<td>About security access</td>
-</tr>
-<tr>
 <td>property_code</td>
 <td>-</td>
 <td>Yes</td>
 <td>To access property detail</td>
 </tr>
 </tbody></table>
+
+          <h1 id="reservations-[agency]">Reservations [Agency]</h1>
+
+<h2 id="get-all-reservations">Get All Reservations</h2>
+<pre class="highlight shell"><code>curl <span class="s2">"https://app.hotelrunner.com/api/v1/apps/agency/reservations?token={TOKEN}&amp;hr_id={HR_ID}"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"reservations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"hr_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"R754208185"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"provider_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"channel"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"confirmed"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"guest"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"cancel_reason"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-21T10:01:25Z"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-21T09:02:51Z"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"sub_total"</span><span class="p">:</span><span class="w"> </span><span class="mf">185.0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"extras_total"</span><span class="p">:</span><span class="w"> </span><span class="mf">45.0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"adjustments_total"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"tax_total"</span><span class="p">:</span><span class="w"> </span><span class="mf">15.0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mf">245.0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EUR"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"checkin_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-11"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"checkout_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-12"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"note"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"payment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"credit_card"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"istanbul"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Turkey"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90955223454"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"guest@example.net"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bagdat Cad. Istanbul"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"street_2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"rooms"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"15571"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reserved"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HR:10105"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">200.0</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"non_refundable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"nights"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"total_guest"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"total_adult"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"child_ages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+              </span><span class="p">],</span><span class="w">
+              </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Queen Room - Disability Access - Deluxe Rate"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"checkin_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-11"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"checkout_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-12"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"extra_info"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Room Extra Info:Modern bir şekilde dekore edilmiş bu stüdyoda çalışma masası ve özel banyo bulunmaktadır.\nMeal Plan:Kahvaltı oda fiyatına dahildir.\nNon-Smoking Room"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"daily_prices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                  </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-01-11"</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200.0"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+              </span><span class="p">],</span><span class="w">
+              </span><span class="s2">"extras"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Airport Transfer (1 Person)"</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"45.0"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+              </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"current_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves all reservations with pagination.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET https://app.hotelrunner.com/api/v1/apps/agency/reservations</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>from_date</strong></td>
+<td>10 days before</td>
+<td>No</td>
+<td>Format: <code class="prettyprint">YYYY-MM-DD</code>. If provided, reservations after this date will be retrieved.</td>
+</tr>
+<tr>
+<td><strong>per_page</strong></td>
+<td>10</td>
+<td>No</td>
+<td>Number of reservations per page.</td>
+</tr>
+<tr>
+<td><strong>page</strong></td>
+<td>1</td>
+<td>No</td>
+<td>Number of current page.</td>
+</tr>
+<tr>
+<td><strong>reservation_number</strong></td>
+<td>-</td>
+<td>No</td>
+<td>Used to get a specific reservation. It can be either HotelRunner or Channel reservation code.</td>
+</tr>
+</tbody></table>
+
+<h3 id="reservation-object">Reservation Object</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>hr_number</strong></td>
+<td>Reservation code on HotelRunner</td>
+</tr>
+<tr>
+<td><strong>provider_number</strong></td>
+<td>Reservation code on Sales Channel (can be blank*)</td>
+</tr>
+<tr>
+<td><strong>channel</strong></td>
+<td>Sales channel code (can be blank*)</td>
+</tr>
+<tr>
+<td><strong>state</strong></td>
+<td>Reservation status on HotelRunner (<code class="prettyprint">reserved</code>,<code class="prettyprint">confirmed</code>, <code class="prettyprint">canceled</code>)*</td>
+</tr>
+<tr>
+<td><strong>guest</strong></td>
+<td>Guest name, who made the reservation</td>
+</tr>
+<tr>
+<td><strong>cancel_reason</strong></td>
+<td>Cancel reason (can be blank*)</td>
+</tr>
+<tr>
+<td><strong>completed_at</strong></td>
+<td>The time that shows when HotelRunner received the reservation (UTC)</td>
+</tr>
+<tr>
+<td><strong>updated_at</strong></td>
+<td>The time that shows when HotelRunner received the latest update (UTC)</td>
+</tr>
+<tr>
+<td><strong>sub_total</strong></td>
+<td>Sub total (tax not included)</td>
+</tr>
+<tr>
+<td><strong>extras_total</strong></td>
+<td>Extras total (tax not included)</td>
+</tr>
+<tr>
+<td><strong>adjustments_total</strong></td>
+<td>Adjustments total (Price adjustments total that made by Property Admin)</td>
+</tr>
+<tr>
+<td><strong>tax_total</strong></td>
+<td>Tax total</td>
+</tr>
+<tr>
+<td><strong>total</strong></td>
+<td>Grand total</td>
+</tr>
+<tr>
+<td><strong>currency</strong></td>
+<td>Currency (ISO-4217)</td>
+</tr>
+<tr>
+<td><strong>checkin_date</strong></td>
+<td>Check-in Date</td>
+</tr>
+<tr>
+<td><strong>checkout_date</strong></td>
+<td>Check-out Date</td>
+</tr>
+<tr>
+<td><strong>note</strong></td>
+<td>Guest note (can be blank*)</td>
+</tr>
+<tr>
+<td><strong>payment</strong></td>
+<td>Payment method information (<code class="prettyprint">credit_card</code>, <code class="prettyprint">bank_transfer</code>, <code class="prettyprint">cash</code>, <code class="prettyprint">paypal</code>)</td>
+</tr>
+<tr>
+<td><strong>address</strong></td>
+<td>See address json structure.</td>
+</tr>
+<tr>
+<td><strong>rooms</strong> &gt; <strong>code</strong></td>
+<td>The room code.</td>
+</tr>
+<tr>
+<td><strong>rooms</strong> &gt; <strong>state</strong></td>
+<td>The line item state in reservation. (<code class="prettyprint">reserved</code>,<code class="prettyprint">confirmed</code>, <code class="prettyprint">canceled</code>)*</td>
+</tr>
+</tbody></table>
+
+<p>*blank: Empty or Null</p>
+
+<p>*payment: We don&rsquo;t share credit card information.</p>
+
+<p>*reserved: Initial state of reservation.</p>
+
+<p>*confirmed: Next state of reservation when Hotelier confirms it.</p>
 
         </section>
 
