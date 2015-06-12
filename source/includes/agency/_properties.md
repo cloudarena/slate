@@ -2,6 +2,43 @@
 
 # Properties [Agency]
 
+## Fetch [Agency]
+
+```shell
+curl "https://app.hotelrunner.com/api/v1/apps/agency/properties/fetch?token={TOKEN}&hr_id={HR_ID}"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+   "properties":[
+      {
+         "address":"Bakırköy, Istanbul",
+         "latitude":"40.978",
+         "longitude":"28.86959999999999",
+         "canonical_address":"Ataköy 1 Mh., Fişekhane Cd 4-56, 34140 Bakırköy/İstanbul, Turkey",
+         "name":"agency-property1",
+         "code":"agency-property",
+         "url":"https://app.hotelrunner.com/property/agency-property1",
+         "currency":"TRY",
+         "overview":null,
+         "image_url":"noimage",
+         "from_price":1.0,
+         "price_available":true
+      }
+   ],
+   "count":1,
+   "current_page":1,
+   "pages":1
+}
+```
+This endpoint retrieves available properties with pagination.
+
+### HTTP REQUEST
+
+GET https://app.hotelrunner.com/api/v1/apps/agency/properties/fetch
+
 ## Search [Agency]
 
 ```shell
@@ -33,7 +70,7 @@ curl "https://app.hotelrunner.com/api/v1/apps/agency/properties/search?token={TO
    "pages":1
 }
 ```
-This endpoint retrieves available properties with pagination.
+This endpoint retrieves available properties with pagination by given parameters.
 
 ### HTTP REQUEST
 
