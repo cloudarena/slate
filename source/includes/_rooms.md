@@ -13,6 +13,10 @@ curl "https://app.hotelrunner.com/api/v1/apps/rooms?token={TOKEN}&hr_id={HR_ID}"
 
   {
     "code": "HR:1",
+    "availability_group": "HR:1",
+    "availability_update": true,
+    "restrictions_update": true,
+    "price_update": true,
     "name": "Standard Room",
     "description": "Standard Room Description",
     "policy": "Standard Room Policy",
@@ -22,6 +26,10 @@ curl "https://app.hotelrunner.com/api/v1/apps/rooms?token={TOKEN}&hr_id={HR_ID}"
   },
   {
     "code": "NR:HR:1",
+    "availability_group": "HR:1",
+    "availability_update": false,
+    "restrictions_update": false,
+    "price_update": false,
     "name": "Standard Room - NR",
     "description": "Standard Room Description",
     "policy": "Standard Room Policy",
@@ -31,6 +39,10 @@ curl "https://app.hotelrunner.com/api/v1/apps/rooms?token={TOKEN}&hr_id={HR_ID}"
   },
   {
     "code": "HR:2",
+    "availability_group": "HR:2",
+    "availability_update": true,
+    "restrictions_update": true,
+    "price_update": true,
     "name": "Double Room",
     "description": "Double Room Description",
     "policy": "Double Room Policy",
@@ -52,6 +64,10 @@ This endpoint retrieves all rooms of property.
 Name | Description
 ------------ | ------
 **code** | Room code on HotelRunner (`NR` means Non refundable)
+**availability_group** | Room availability group on HotelRunner. All availabilities of rates are same within same group.  
+**availability_update** | Only room whose `availability_update``=`true` can update availabilities.  
+**restrictions_update** | Only room whose `restrictions_update``=`true` can update restrictions.  
+**price_update** | Only room whose `price_update``=`true` can update prices.  
 **name** | Name of room
 **description** | Description of room
 **policy** | Free text policy for room
@@ -87,6 +103,8 @@ Parameter | Default | Required | Description
 **availability** | - | No | Don't send this parameter if you don't want to update availability.
 **price** | - | No | Don't send this parameter if you don't want to update price.
 **stop_sale** | - | No | Don't send this parameter if you don't want to update stop sale. Accepted values: `1` or `0`
+**cta** | - | No | Don't send this parameter if you don't want to update CTA. Accepted values: `1` or `0`
+**ctd** | - | No | Don't send this parameter if you don't want to update CTD. Accepted values: `1` or `0`
 **min_stay** | - | No | Don't send this parameter if you don't want to update min_stay.
 **start_date** | - | Yes | Format: `YYYY-MM-DD` Start date
 **end_date** | - | Yes | Format: `YYYY-MM-DD` End date
