@@ -23,9 +23,7 @@ curl "https://app.hotelrunner.com/api/v1/apps/agency/properties/fetch?token={TOK
          "url":"https://app.hotelrunner.com/property/agency-property1",
          "currency":"TRY",
          "overview":null,
-         "image_url":"noimage",
-         "from_price":1.0,
-         "price_available":true
+         "image_url":"noimage"
       }
    ],
    "count":1,
@@ -151,8 +149,6 @@ curl "https://app.hotelrunner.com/api/v1/apps/agency/properties/detail?token={TO
       "url":"https://app.hotelrunner.com/property/agency-property1",
       "currency":"TRY",
       "overview":null,
-      "from_price":1.0,
-      "price_available":true,
       "services":"[]",
       "facilities":"[]",
       "policies":[  
