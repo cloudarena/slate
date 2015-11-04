@@ -23,9 +23,7 @@ curl "https://app.hotelrunner.com/api/v1/apps/agency/properties/fetch?token={TOK
          "url":"https://app.hotelrunner.com/property/agency-property1",
          "currency":"TRY",
          "overview":null,
-         "image_url":"noimage",
-         "from_price":1.0,
-         "price_available":true
+         "image_url":"noimage"
       }
    ],
    "count":1,
@@ -39,10 +37,17 @@ This endpoint retrieves available properties with pagination.
 
 GET https://app.hotelrunner.com/api/v1/apps/agency/properties/fetch
 
+### QUERY PARAMETERS
+
+Parameter | Default | Required | Description
+--------- | ------- | ---------|-----------
+page  | 1       |    No    | Number of current page.
+
+
 ## Search [Agency]
 
 ```shell
-curl "https://app.hotelrunner.com/api/v1/apps/agency/properties/search?token={TOKEN}&hr_id={HR_ID}"
+curl "https://app.hotelrunner.com/api/v1/apps/agency/properties/search?token={TOKEN}&hr_id={HR_ID}&location={LOCATION}"
 ```
 
 > The above command returns JSON structured like this:
@@ -82,11 +87,13 @@ Parameter | Default | Required | Description
 --------- | ------- | ---------|-----------
 property_name | - | No | -
 location | - | Yes | -
+page  | 1       |    No    | Number of current page.
+
 
 ## Auto complete [Agency]
 
 ```shell
-curl "https://app.hotelrunner.com/api/v1/apps/agency/properties/auto_complete?token={TOKEN}&hr_id={HR_ID}"
+curl "https://app.hotelrunner.com/api/v1/apps/agency/properties/auto_complete?token={TOKEN}&hr_id={HR_ID}&property_name={PROPERTY_NAME}"
 ```
 
 > The above command returns JSON structured like this:
@@ -125,7 +132,7 @@ property_name   | - |       Yes  | This is used as keyword to search properties
 ## Detail [Agency]
 
 ```shell
-curl "https://app.hotelrunner.com/api/v1/apps/agency/properties/detail?token={TOKEN}&hr_id={HR_ID}"
+curl "https://app.hotelrunner.com/api/v1/apps/agency/properties/detail?token={TOKEN}&hr_id={HR_ID}&property_code={PROPERTY_CODE}"
 ```
 
 > The above command returns JSON structured like this:
@@ -142,8 +149,6 @@ curl "https://app.hotelrunner.com/api/v1/apps/agency/properties/detail?token={TO
       "url":"https://app.hotelrunner.com/property/agency-property1",
       "currency":"TRY",
       "overview":null,
-      "from_price":1.0,
-      "price_available":true,
       "services":"[]",
       "facilities":"[]",
       "policies":[  
