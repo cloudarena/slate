@@ -870,9 +870,7 @@ which can get information on reservations, properties</p>
          </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"https://app.hotelrunner.com/property/agency-property1"</span><span class="p">,</span><span class="w">
          </span><span class="s2">"currency"</span><span class="p">:</span><span class="s2">"TRY"</span><span class="p">,</span><span class="w">
          </span><span class="s2">"overview"</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"image_url"</span><span class="p">:</span><span class="s2">"noimage"</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"from_price"</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span><span class="w">
-         </span><span class="s2">"price_available"</span><span class="p">:</span><span class="kc">true</span><span class="w">
+         </span><span class="s2">"image_url"</span><span class="p">:</span><span class="s2">"noimage"</span><span class="w">
       </span><span class="p">}</span><span class="w">
    </span><span class="p">],</span><span class="w">
    </span><span class="s2">"count"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -887,8 +885,26 @@ which can get information on reservations, properties</p>
 
 <p>GET https://app.hotelrunner.com/api/v1/apps/agency/properties/fetch</p>
 
+<h3 id="query-parameters">QUERY PARAMETERS</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>page</td>
+<td>1</td>
+<td>No</td>
+<td>Number of current page.</td>
+</tr>
+</tbody></table>
+
 <h2 id="search-[agency]">Search [Agency]</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://app.hotelrunner.com/api/v1/apps/agency/properties/search?token={TOKEN}&amp;hr_id={HR_ID}"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://app.hotelrunner.com/api/v1/apps/agency/properties/search?token={TOKEN}&amp;hr_id={HR_ID}&amp;location={LOCATION}"</span>
 </code></pre>
 
 <blockquote>
@@ -945,10 +961,16 @@ which can get information on reservations, properties</p>
 <td>Yes</td>
 <td>-</td>
 </tr>
+<tr>
+<td>page</td>
+<td>1</td>
+<td>No</td>
+<td>Number of current page.</td>
+</tr>
 </tbody></table>
 
 <h2 id="auto-complete-[agency]">Auto complete [Agency]</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://app.hotelrunner.com/api/v1/apps/agency/properties/auto_complete?token={TOKEN}&amp;hr_id={HR_ID}"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://app.hotelrunner.com/api/v1/apps/agency/properties/auto_complete?token={TOKEN}&amp;hr_id={HR_ID}&amp;property_name={PROPERTY_NAME}"</span>
 </code></pre>
 
 <blockquote>
@@ -998,7 +1020,7 @@ which can get information on reservations, properties</p>
 </tbody></table>
 
 <h2 id="detail-[agency]">Detail [Agency]</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://app.hotelrunner.com/api/v1/apps/agency/properties/detail?token={TOKEN}&amp;hr_id={HR_ID}"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://app.hotelrunner.com/api/v1/apps/agency/properties/detail?token={TOKEN}&amp;hr_id={HR_ID}&amp;property_code={PROPERTY_CODE}"</span>
 </code></pre>
 
 <blockquote>
@@ -1015,8 +1037,6 @@ which can get information on reservations, properties</p>
       </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"https://app.hotelrunner.com/property/agency-property1"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"currency"</span><span class="p">:</span><span class="s2">"TRY"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"overview"</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"from_price"</span><span class="p">:</span><span class="mf">1.0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"price_available"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
       </span><span class="s2">"services"</span><span class="p">:</span><span class="s2">"[]"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"facilities"</span><span class="p">:</span><span class="s2">"[]"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"policies"</span><span class="p">:[</span><span class="w">  
