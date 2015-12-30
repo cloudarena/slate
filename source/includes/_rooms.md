@@ -83,10 +83,11 @@ Name | Description
 curl -X PUT --data "hr_id={HR_ID}&token={TOKEN}&room_code={ROOM_CODE}&channel_codes[]={CHANNEL_CODE_1}&channel_codes[]={CHANNEL_CODE_2}&start_date={START_DATE}&end_date={END_DATE}&availability={AVAILABILITY}&price={PRICE}&min_stay={MIN_STAY}&stop_sale={STOP_SALE}" https://app.hotelrunner.com/api/v1/apps/rooms/~
 ```
 
-> The above command returns text structured like this:
+> The above command returns json structured like this:
 
-```text
-'ok' for success, 'try_again' for fail.
+```json
+[{status: 'ok', transaction_id: 123456789 }]
+[{status: 'try_again', transaction_id: 123456789 }]
 ```
 
 

@@ -94,8 +94,12 @@
 
 
 ```
-> The response on your side must be 'ok' text:
 
+> The above command should return json structured like this:
+
+```json
+[{status: 'ok'}]
+```
 
 Real-time push reservations provide your application with instant notifications of new/updated reservations as
 they are received by HotelRunner.
