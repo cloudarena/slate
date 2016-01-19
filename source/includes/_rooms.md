@@ -123,3 +123,58 @@ Parameter | Default | Required | Description
 **end_date** | - | Yes | Format: `YYYY-MM-DD` End date
 **days** | [0,1,2,3,4,5,6] | No | Type: `Array` Used to update specific week days within given date range. (Sunday: 0)
 **channel_codes** | All connected channels of room | No | Type: `Array` Used to update specific channels. (eg. ['bookingcom', 'online'])
+
+
+## Get Transaction Details
+
+
+```shell
+curl "https://app.hotelrunner.com/api/v1/apps/infos/transaction_details?transaction_id={TRANSACTION_ID}&token={TOKEN}&hr_id={HR_ID}"
+```
+
+> The above command returns json structured like this:
+
+```json
+{
+  "883770514": {
+    "counts": {
+      "failed": 0,
+      "succeeded": 2,
+      "in_progress": 0
+    },
+    "details": {
+      "bookingcom": [
+        {
+          "id": 12529,
+          "state": "succeeded",
+          "name": "Standard Room",
+          "code": "156754:8833301",
+          "allocation_group": "8833301",
+          "created_at": "2015-10-16T08:01:29Z",
+          "pid": 9651,
+          "error_message": null
+        }
+      ],
+      "online": [
+        {
+          "id": null,
+          "state": "succeeded",
+          "name": "Online",
+          "code": "Online",
+          "allocation_group": "Online",
+          "created_at": "2015-10-16T07:54:25Z",
+          "pid": null,
+          "error_message": null
+        }
+      ]
+    }
+  }
+}
+		
+```
+
+This endpoint returns update status logs of given transaction id
+
+
+
+
