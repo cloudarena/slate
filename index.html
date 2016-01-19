@@ -446,6 +446,26 @@ which can get information on rooms, reservations, make price &amp; availability 
 
 <p>This endpoint returns update status logs of given transaction id</p>
 
+<p><code class="prettyprint">GET https://app.hotelrunner.com/api/v1/apps/infos/transaction_details</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>transaction_id</strong></td>
+<td>-</td>
+<td>Yes</td>
+<td>Each room update request returns transaction_id.</td>
+</tr>
+</tbody></table>
+
           <h1 id="reservations-[property]">Reservations [Property]</h1>
 
 <h2 id="get-all-reservations">Get All Reservations</h2>
