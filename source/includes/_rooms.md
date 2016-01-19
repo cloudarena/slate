@@ -175,6 +175,13 @@ curl "https://app.hotelrunner.com/api/v1/apps/infos/transaction_details?transact
 
 This endpoint returns update status logs of given transaction id
 
+`GET https://app.hotelrunner.com/api/v1/apps/infos/transaction_details`
+
+### Query Parameters
+
+Parameter | Default | Required | Description
+------------ | ------ | ------- | -----------
+**transaction_id** | - | Yes | Each room update request returns transaction_id.
 
 
 
