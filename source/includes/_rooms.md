@@ -86,19 +86,19 @@ curl -X PUT --data "hr_id={HR_ID}&token={TOKEN}&room_code={ROOM_CODE}&channel_co
 > The above command returns json structured like this:
 
 ```json
-[
+
 	{
 		status: 'ok', 
-		transaction_id: 123456789 
+		transaction_id: "123456789" 
 	}
-]
 
-[
+
+
 	{
 		status: 'try_again', 
-		transaction_id: 123456789 
+		transaction_id: "123456789" 
 	}
-]
+
 		
 ```
 
@@ -135,39 +135,38 @@ curl "https://app.hotelrunner.com/api/v1/apps/infos/transaction_details?transact
 > The above command returns json structured like this:
 
 ```json
-{
-  "883770514": {
+{{
+  "transaction": {
+    "id": "883770514",
     "counts": {
-      "failed": 0,
-      "succeeded": 2,
+      "failed": 1,
+      "succeeded": 1,
       "in_progress": 0
     },
-    "details": {
-      "bookingcom": [
-        {
-          "id": 12529,
-          "state": "succeeded",
-          "name": "Standard Room",
-          "code": "156754:8833301",
-          "allocation_group": "8833301",
-          "created_at": "2015-10-16T08:01:29Z",
-          "pid": 9651,
-          "error_message": null
-        }
-      ],
-      "online": [
-        {
-          "id": null,
-          "state": "succeeded",
-          "name": "Online",
-          "code": "Online",
-          "allocation_group": "Online",
-          "created_at": "2015-10-16T07:54:25Z",
-          "pid": null,
-          "error_message": null
-        }
-      ]
-    }
+    "details": [
+      {
+        "id": 12529,
+        "channel_code": "bookingcom",
+        "state": "failed",
+        "name": "Люкс (68366) - Стандартный тариф - 1 Person",
+        "code": "156754:8833301",
+        "allocation_group": "8833301",
+        "created_at": "2015-10-16T08:01:29Z",
+        "pid": 9651,
+        "error_message": null
+      },
+      {
+        "id": null,
+        "channel_code": "online",
+        "state": "succeeded",
+        "name": "Online",
+        "code": "Online",
+        "allocation_group": "Online",
+        "created_at": "2015-10-16T07:54:25Z",
+        "pid": null,
+        "error_message": null
+      }
+    ]
   }
 }
 		
