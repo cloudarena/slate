@@ -135,7 +135,7 @@ curl "https://app.hotelrunner.com/api/v1/apps/infos/transaction_details?transact
 > The above command returns json structured like this:
 
 ```json
-{{
+{
   "transaction": {
     "id": "883770514",
     "counts": {
