@@ -295,7 +295,7 @@ which can get information on rooms, reservations, make price &amp; availability 
 </tbody></table>
 
 <h2 id="update-room">Update Room</h2>
-<pre class="highlight shell"><code>curl -X PUT --data <span class="s2">"hr_id={HR_ID}&amp;token={TOKEN}&amp;room_code={ROOM_CODE}&amp;channel_codes[]={CHANNEL_CODE_1}&amp;channel_codes[]={CHANNEL_CODE_2}&amp;start_date={START_DATE}&amp;end_date={END_DATE}&amp;availability={AVAILABILITY}&amp;price={PRICE}&amp;min_stay={MIN_STAY}&amp;stop_sale={STOP_SALE}"</span> https://app.hotelrunner.com/api/v1/apps/rooms/~
+<pre class="highlight shell"><code>curl -X PUT --data <span class="s2">"v2=1&amp;hr_id={HR_ID}&amp;token={TOKEN}&amp;room_code={ROOM_CODE}&amp;channel_codes[]={CHANNEL_CODE_1}&amp;channel_codes[]={CHANNEL_CODE_2}&amp;start_date={START_DATE}&amp;end_date={END_DATE}&amp;availability={AVAILABILITY}&amp;price={PRICE}&amp;min_stay={MIN_STAY}&amp;stop_sale={STOP_SALE}"</span> https://app.hotelrunner.com/api/v1/apps/rooms/~
 </code></pre>
 
 <blockquote>
@@ -331,6 +331,12 @@ which can get information on rooms, reservations, make price &amp; availability 
 <th>Description</th>
 </tr>
 </thead><tbody>
+<tr>
+<td><strong>v2</strong></td>
+<td>-</td>
+<td>Yes</td>
+<td>v2 parameter must be included in your update requests. Accepted Value: <code class="prettyprint">1</code></td>
+</tr>
 <tr>
 <td><strong>room_code</strong></td>
 <td>-</td>
