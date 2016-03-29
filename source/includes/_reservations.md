@@ -92,7 +92,7 @@ Parameter | Default | Required | Description
 **per_page** | 10 | No | Number of reservations per page.
 **page** | 1 | No | Number of current page.
 **reservation_number** | - | No | Used to get a specific reservation. It can be either HotelRunner or Channel reservation code.
-**undelivered** | false | No | If set to `true`, only undelivered reservations will be shown
+**undelivered** | true | No | If set to `false`, all reservations will be shown with pagination
 
 ### Reservation Object
 
