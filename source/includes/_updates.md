@@ -3,7 +3,7 @@
 ## Get All Reservations
 
 ```shell
-curl "https://app.hotelrunner.com/api/v1/apps/reservations?token={TOKEN}&hr_id={HR_ID}"
+curl "https://app.hotelrunner.com/api/v2/apps/reservations?token={TOKEN}&hr_id={HR_ID}"
 ```
 
 > The above command returns JSON structured like this:

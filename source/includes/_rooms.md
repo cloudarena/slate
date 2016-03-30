@@ -3,61 +3,76 @@
 ## Get Room List
 
 ```shell
-curl "https://app.hotelrunner.com/api/v1/apps/rooms?token={TOKEN}&hr_id={HR_ID}"
+curl "https://app.hotelrunner.com/api/v2/apps/rooms?token={TOKEN}&hr_id={HR_ID}"
 ```
 
 > The above command returns JSON structured like this:
 
 ```json
-[
-
-  {
-    "code": "HR:1",
-    "availability_group": "HR:1",
-    "availability_update": true,
-    "restrictions_update": true,
-    "price_update": true,
-    "name": "Standard Room",
-    "description": "Standard Room Description",
-    "policy": "Standard Room Policy",
-    "room_capacity": 3,
-    "adult_capacity": 2,
-    "channel_codes": ["bookingcom", "online", "hrs", "expedia"]
-  },
-  {
-    "code": "NR:HR:1",
-    "availability_group": "HR:1",
-    "availability_update": false,
-    "restrictions_update": false,
-    "price_update": false,
-    "name": "Standard Room - NR",
-    "description": "Standard Room Description",
-    "policy": "Standard Room Policy",
-    "room_capacity": 3,
-    "adult_capacity": 2,
-    "channel_codes": ["bookingcom", "online", "hrs", "expedia"]
-  },
-  {
-    "code": "HR:2",
-    "availability_group": "HR:2",
-    "availability_update": true,
-    "restrictions_update": true,
-    "price_update": true,
-    "name": "Double Room",
-    "description": "Double Room Description",
-    "policy": "Double Room Policy",
-    "room_capacity": 2,
-    "adult_capacity": 2,
-    "channel_codes": ["bookingcom", "online", "hrs"]
-  }
-]
+{
+    "rooms": [
+        {
+            "code": "HR:1",
+            "availability_group": "HR:1",
+            "availability_update": true,
+            "restrictions_update": true,
+            "price_update": true,
+            "name": "Standard Room",
+            "description": "Standard Room Description",
+            "policy": "Standard Room Policy",
+            "room_capacity": 3,
+            "adult_capacity": 2,
+            "channel_codes": [
+                "bookingcom",
+                "online",
+                "hrs",
+                "expedia"
+            ]
+        },
+        {
+            "code": "NR:HR:1",
+            "availability_group": "HR:1",
+            "availability_update": false,
+            "restrictions_update": false,
+            "price_update": false,
+            "name": "Standard Room - NR",
+            "description": "Standard Room Description",
+            "policy": "Standard Room Policy",
+            "room_capacity": 3,
+            "adult_capacity": 2,
+            "channel_codes": [
+                "bookingcom",
+                "online",
+                "hrs",
+                "expedia"
+            ]
+        },
+        {
+            "code": "HR:2",
+            "availability_group": "HR:2",
+            "availability_update": true,
+            "restrictions_update": true,
+            "price_update": true,
+            "name": "Double Room",
+            "description": "Double Room Description",
+            "policy": "Double Room Policy",
+            "room_capacity": 2,
+            "adult_capacity": 2,
+            "channel_codes": [
+                "bookingcom",
+                "online",
+                "hrs"
+            ]
+        }
+    ]
+}
 ```
 
 This endpoint retrieves all rooms of property.
 
 ### HTTP Request
 
-`GET https://app.hotelrunner.com/api/v1/apps/rooms`
+`GET https://app.hotelrunner.com/api/v2/apps/rooms`
 
 ### Room Object
 
@@ -80,7 +95,7 @@ Name | Description
 
 
 ```shell
-curl -X PUT --data "v2=1&hr_id={HR_ID}&token={TOKEN}&room_code={ROOM_CODE}&channel_codes[]={CHANNEL_CODE_1}&channel_codes[]={CHANNEL_CODE_2}&start_date={START_DATE}&end_date={END_DATE}&availability={AVAILABILITY}&price={PRICE}&min_stay={MIN_STAY}&stop_sale={STOP_SALE}" https://app.hotelrunner.com/api/v1/apps/rooms/~
+curl -X PUT --data "hr_id={HR_ID}&token={TOKEN}&room_code={ROOM_CODE}&channel_codes[]={CHANNEL_CODE_1}&channel_codes[]={CHANNEL_CODE_2}&start_date={START_DATE}&end_date={END_DATE}&availability={AVAILABILITY}&price={PRICE}&min_stay={MIN_STAY}&stop_sale={STOP_SALE}" https://app.hotelrunner.com/api/v1/apps/rooms/~
 ```
 
 > The above command returns json structured like this:
@@ -106,13 +121,12 @@ curl -X PUT --data "v2=1&hr_id={HR_ID}&token={TOKEN}&room_code={ROOM_CODE}&chann
 This endpoint updates the room.
 
 
-`PUT https://app.hotelrunner.com/api/v1/apps/rooms/~`
+`PUT https://app.hotelrunner.com/api/v2/apps/rooms/~`
 
 ### Query Parameters
 
 Parameter | Default | Required | Description
 ------------ | ------ | ------- | -----------
-**v2** | - | Yes | v2 parameter must be included in your update requests. Accepted Value: `1` 
 **room_code** | - | Yes | Room code that will be updated.
 **availability** | - | No | Don't send this parameter if you don't want to update availability.
 **price** | - | No | Don't send this parameter if you don't want to update price.
@@ -130,7 +144,7 @@ Parameter | Default | Required | Description
 
 
 ```shell
-curl "https://app.hotelrunner.com/api/v1/apps/infos/transaction_details?transaction_id={TRANSACTION_ID}&token={TOKEN}&hr_id={HR_ID}"
+curl "https://app.hotelrunner.com/api/v2/apps/infos/transaction_details?transaction_id={TRANSACTION_ID}&token={TOKEN}&hr_id={HR_ID}"
 ```
 
 > The above command returns json structured like this:

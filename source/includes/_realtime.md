@@ -40,8 +40,8 @@
         "street": "Bagdat Cad. Istanbul",
         "street_2": null
       },
-      "rooms": {
-        "15571": {
+      "rooms": [
+        {
           "state": "reserved",
           "code": "HR:10105",
           "price": 200.0,
@@ -65,7 +65,7 @@
 
           ]
         },
-        "15572": {
+        {
           "state": "reserved",
           "code": "HR:10105",
           "price": 200.0,
@@ -89,8 +89,8 @@
 
           ]
         }
-      }
-    }
+      ]
+ }
 
 
 ```

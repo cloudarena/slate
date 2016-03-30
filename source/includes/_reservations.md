@@ -3,7 +3,7 @@
 ## Get All Reservations
 
 ```shell
-curl "https://app.hotelrunner.com/api/v1/apps/reservations?token={TOKEN}&hr_id={HR_ID}"
+curl "https://app.hotelrunner.com/api/v2/apps/reservations?token={TOKEN}&hr_id={HR_ID}"
 ```
 
 > The above command returns JSON structured like this:
@@ -39,8 +39,8 @@ curl "https://app.hotelrunner.com/api/v1/apps/reservations?token={TOKEN}&hr_id={
             "street": "Bagdat Cad. Istanbul",
             "street_2": null
           },
-          "rooms": {
-            "15571": {
+          "rooms": [
+ 			{
               "state": "reserved",
               "code": "HR:10105",
               "availability_group": "HR:10105",
@@ -69,7 +69,7 @@ curl "https://app.hotelrunner.com/api/v1/apps/reservations?token={TOKEN}&hr_id={
 	            }
 	          ]
             }
-          }
+          ]
         }
   ],
   "count": 1,
@@ -82,7 +82,7 @@ This endpoint retrieves all reservations with pagination.
 
 ### HTTP Request
 
-`GET https://app.hotelrunner.com/api/v1/apps/reservations`
+`GET https://app.hotelrunner.com/api/v2/apps/reservations`
 
 ### Query Parameters
 
