@@ -16,11 +16,6 @@ property_includes:
   - reservations
   - realtime
 
-agency_includes:
-  - index
-  - properties
-  - reservations
-
 default_includes:
   - errors
 

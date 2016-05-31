@@ -17,6 +17,7 @@
       "provider_number": "32423234422",
       "channel": "Booking.com",
       "state": "confirmed",
+	  "modified": true,
       "guest": "John Doe",
       "cancel_reason": null,
       "completed_at": "2015-01-21T10:01:25Z",
@@ -31,6 +32,7 @@
       "checkout_date": "2015-01-12",
       "note": null,
       "payment": "credit_card",
+	  "paid_amount":0.0,
       "address": {
         "city": "Istanbul",
         "state": "",
@@ -129,6 +131,7 @@ Name | Description
 **provider_number** | Reservation code on Sales Channel (can be blank*)
 **channel** | Sales channel code (can be blank*)
 **state** | Reservation status on HotelRunner (`reserved`,`confirmed`, `canceled`)*
+**modified** | Flag that shows whether the reservation has been modified after your latest activity or not.
 **guest** | Guest name, who made the reservation
 **cancel_reason** | Cancel reason (can be blank*)
 **completed_at** | The time that shows when HotelRunner received the reservation (UTC)
@@ -143,6 +146,7 @@ Name | Description
 **checkout_date** | Check-out Date
 **note** | Guest note (can be blank*)
 **payment** | Payment method information (`credit_card`, `bank_transfer`, `cash`, `paypal`)
+**paid_total** | Payment total
 **address** | See address json structure.
 **rooms** > **code** | The room code.
 **rooms** > **state** | The line item state in reservation. (`reserved`,`confirmed`, `canceled`)*

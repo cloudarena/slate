@@ -92,12 +92,6 @@ under the License.
         <% end %>
         </section>
 
-        <section class='content'> <header id='for_agencies'>For Agencies</header>
-        <% current_page.data.agency_includes && current_page.data.agency_includes.each do |include| %>
-          <%= partial "includes/agency/#{include}" %>
-        <% end %>
-        </section>
-
         <section class='content'> <header id='extras'>Extras</header>
         <% current_page.data.default_includes && current_page.data.default_includes.each do |include| %>
           <%= partial "includes/#{include}" %>
