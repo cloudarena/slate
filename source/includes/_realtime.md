@@ -102,7 +102,7 @@
 ```json
 
  {
-	status: 'ok'
+	"status": "ok"
  }
 
 ```
