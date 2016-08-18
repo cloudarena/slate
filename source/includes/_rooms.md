@@ -103,14 +103,14 @@ curl -X PUT --data "hr_id={HR_ID}&token={TOKEN}&room_code={ROOM_CODE}&channel_co
 ```json
 
 	{
-		"status": 'ok', 
+		"status": "ok", 
 		"transaction_id": "123456789" 
 	}
 
 
 
 	{
-		"status": 'try_again', 
+		"status": "try_again", 
 		"transaction_id": "123456789" 
 	}
 
